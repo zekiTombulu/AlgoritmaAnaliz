@@ -32,7 +32,7 @@ public class DizideEnBuyukEleman {
     public static void maxElemanBul(int A[]){
         try {
             int eleman1=0,eleman2=0;
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < A.length; i++) {
                 eleman1=A[i];
                 if(eleman1>eleman2){
                     eleman2=eleman1;
