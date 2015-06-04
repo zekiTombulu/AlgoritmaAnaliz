@@ -12,7 +12,7 @@ import java.util.Random;
  *
  * @author zeki
  */
-public class Soru_6_main {
+public class Soru_8_main {
 
     /**
      * @param args the command line arguments
