@@ -9,6 +9,7 @@ package soru_7;
  *
  * @author zeki
  */
+//karmasiklik O(log n)
 public class main {
 
     int size;
@@ -28,11 +29,6 @@ public class main {
         int sag_baslangic = orta_baslangic * 2;
         int sag_bitis = size - 1;
 
-        System.out.println("ilk sol  " + sol_baslangic);
-        System.out.println("orta bas " + orta_baslangic);
-        System.out.println("sağ bas " + sag_baslangic);
-        System.out.println("sağ bitis   " + sag_bitis);
-
         while (orta_baslangic >= sol_baslangic) {
             int test_et = (sol_baslangic + orta_baslangic) / 2;
             if (data[test_et] == aranan_sayi) {
@@ -46,31 +42,21 @@ public class main {
                     if (data[test_et] == aranan_sayi) {
                         return true;
                     }
-                    orta_baslangic=test_et2+1;
+                    orta_baslangic = test_et2 + 1;
                 }
-                 while (sag_bitis >= sag_baslangic) {
-
-                    int test_et3 = (sag_bitis + sag_baslangic) / 2;
-                    if (data[test_et] == aranan_sayi) {
-                        return true;
-                    }
-                    sag_baslangic=test_et3+1;
-                }
-
-            }
-            if (data[test_et] > aranan_sayi) {
-                orta_baslangic = test_et - 1;
-
-              
-                
                 while (sag_bitis >= sag_baslangic) {
 
                     int test_et3 = (sag_bitis + sag_baslangic) / 2;
                     if (data[test_et] == aranan_sayi) {
                         return true;
                     }
-                    sag_baslangic=test_et3+1;
+                    sag_baslangic = test_et3 + 1;
                 }
+
+            }
+            if (data[test_et] > aranan_sayi) {
+                sag_baslangic = test_et - 1;
+
             }
         }
         return false;
