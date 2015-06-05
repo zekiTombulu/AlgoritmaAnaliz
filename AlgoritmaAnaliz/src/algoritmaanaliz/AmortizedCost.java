@@ -6,7 +6,7 @@
 
 package algoritmaanaliz;
 
-/**
+/**..
  *
  * @author zeki
  */
