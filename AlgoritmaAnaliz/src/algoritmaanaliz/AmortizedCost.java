@@ -7,7 +7,7 @@
 package algoritmaanaliz;
 
 /**..
- *
+ ***
  * @author zeki
  */
 public class AmortizedCost {
