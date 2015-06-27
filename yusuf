@@ -1,0 +1,60 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ters_duz;
+
+/**
+ *
+ * @author zeki
+ */
+public class ters_duz {
+
+    static String test = "I like racecars that go fast";
+    /*  "Fourscoreandsevenyearsagoourfaathersbroughtforthonthis"
+     + "containentanewnationconceivedinzLibertyanddedicatedtotheproposit"
+     + "ionthatallmenarecreatedequalNowweareengagedinagreahtcivilwartestin"
+     + "gwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongen"
+     + "dureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateap"
+     + "ortionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivest"
+     + "hatthatnationmightliveItisaltogetherfangandproperthatweshoulddothis"
+     + "Butinalargersensewecannotdedicatewecannotconsecratewecannothallowt"
+     + "hisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecratedi"
+     + "tfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotleno"
+     + "rlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisfo"
+     + "rusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywh"
+     + "ofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicat"
+     + "edtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeinc"
+     + "reaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevoti"
+     + "onthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisn"
+     + "ationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeople"
+     + "bythepeopleforthepeopleshallnotperishfromtheearth";
+     */
+
+    public static void main(String[] args) {
+
+        int dizi_boyutu = test.length();
+        int alt_dizi_boyutu = 0;
+        String alt_dizi = "";
+        for (int i = 0; i < dizi_boyutu; i++) {
+            for (int j = i; j < dizi_boyutu + 1; j++) {
+                //reverse() fonksiyonunu kullanmak için tamponlu string kullanmak gerekiyor
+                StringBuffer duz = new StringBuffer(test.substring(i, j));//tamponlu alt diziler olusturuluyor 
+
+                String duz_test = duz.toString(); //tamponlu diziler normal diziye cevirliyor
+                String ters_test = duz.reverse().toString(); //duz dizinin tersi aliniyor
+
+                if (duz_test.equals(ters_test)) {//ters ve düz birbirine esit mi kontrol ediliyor
+
+                    if (alt_dizi_boyutu < duz_test.length()) {
+                        //en buyuk alt dizi belirleniyor
+                        alt_dizi_boyutu = duz_test.length();
+                        alt_dizi = duz_test;
+                    }
+                }
+            }
+        }
+        System.out.println(alt_dizi);
+    }
+}
